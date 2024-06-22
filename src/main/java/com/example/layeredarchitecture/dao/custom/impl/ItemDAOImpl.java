@@ -39,7 +39,12 @@ public class ItemDAOImpl implements ItemDAO {
         pstm.setBigDecimal(3, dto.getUnitPrice());
         pstm.setInt(4, dto.getQtyOnHand());
         return pstm.executeUpdate() > 0;*/
-        return SqlUtil.execute("INSERT INTO Item (code, description, unitPrice, qtyOnHand) VALUES (?,?,?,?)",entity.getCode(),entity.getDescription(),entity.getUnitPrice(),dto.getQtyOnHand());
+        return SqlUtil.execute("INSERT INTO Item (code, description, unitPrice, qtyOnHand) VALUES (?,?,?,?)",entity.getCode(),entity.getDescription(),entity.getUnitPrice(),entity.getQtyOnHand());
+    }
+
+    @Override
+    public boolean update(Item entity) throws SQLException, ClassNotFoundException {
+        return false;
     }
 
     public boolean update(ItemDTO dto) throws SQLException, ClassNotFoundException {

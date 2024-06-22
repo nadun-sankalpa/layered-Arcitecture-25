@@ -4,6 +4,7 @@ package com.example.layeredarchitecture.dao.custom.impl;
 import com.example.layeredarchitecture.dao.SqlUtil;
 import com.example.layeredarchitecture.dao.custom.OrderDetailsDAO;
 import com.example.layeredarchitecture.DTO.OrderDetailDTO;
+import com.example.layeredarchitecture.entity.OrderDetail;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -11,8 +12,18 @@ import java.util.ArrayList;
 public class OrderDetailsDAOImpl implements OrderDetailsDAO {
 
     @Override
-    public ArrayList<OrderDetailDTO> getAll() throws SQLException, ClassNotFoundException {
+    public ArrayList<OrderDetail> getAll() throws SQLException, ClassNotFoundException {
         return null;
+    }
+
+    @Override
+    public boolean add(OrderDetail entity) throws SQLException, ClassNotFoundException {
+        return false;
+    }
+
+    @Override
+    public boolean update(OrderDetail entity) throws SQLException, ClassNotFoundException {
+        return false;
     }
 
     public boolean add(OrderDetailDTO dto) throws SQLException, ClassNotFoundException {
@@ -47,7 +58,7 @@ public class OrderDetailsDAOImpl implements OrderDetailsDAO {
     }
 
     @Override
-    public OrderDetailDTO search(String id) throws SQLException, ClassNotFoundException {
+    public OrderDetail search(String id) throws SQLException, ClassNotFoundException {
         return null;
     }
 }
