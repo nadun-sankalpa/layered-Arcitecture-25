@@ -1,11 +1,5 @@
 package lk.Ijse.pos.controller;
 
-import lk.Ijse.pos.bo.BOFactory;
-import com.example.layeredarchitecture.bo.custom.*;
-import lk.Ijse.pos.DTO.CustomerDTO;
-import lk.Ijse.pos.DTO.ItemDTO;
-import lk.Ijse.pos.DTO.OrderDetailDTO;
-import lk.Ijse.pos.view.tdm.OrderDetailTM;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import javafx.application.Platform;
@@ -20,12 +14,17 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lk.Ijse.pos.DTO.CustomerDTO;
+import lk.Ijse.pos.DTO.ItemDTO;
+import lk.Ijse.pos.DTO.OrderDetailDTO;
+import lk.Ijse.pos.bo.BOFactory;
 import lk.Ijse.pos.bo.custom.PurchaseOrderBO;
+import lk.Ijse.pos.view.tdm.OrderDetailTM;
 
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.net.URL;
-import java.sql.*;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
